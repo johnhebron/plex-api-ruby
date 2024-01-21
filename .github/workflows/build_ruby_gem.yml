@@ -35,7 +35,7 @@ jobs:
       uses: EndBug/add-and-commit@v9.1.3
       with:
          # Arguments for the git add command
-        add: -f # optional, default is .
+        add: . -f # optional, default is .
         # The name of the user that will be displayed as the author of the commit
         author_name: John Hebron via GitHub Action
         # The email of the user that will be displayed as the author of the commit

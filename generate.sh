@@ -1,12 +1,15 @@
 #!/bin/bash
 
+# Path to the openapi-generator-cli JAR file
+GENERATOR_CLI_JAR="./openapi-generator-cli.jar"
+
 # URL of the OpenAPI spec
 SPEC_URL="https://github.com/LukeHagar/plex-api-spec/raw/main/plex-media-server-spec-dereferenced.yaml"
 
 # OpenAPI Generator Command
 # Using custom templates from the ./custom_templates directory
-openapi-generator generate \
-  -i $SPEC_URL \
+java -jar $GENERATOR_CLI_JAR generate \
+  -i [SPEC_URL_OR_PATH] \
   -g ruby \
   -o ./ \
   -t ./custom_templates

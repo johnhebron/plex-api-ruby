@@ -18,11 +18,9 @@ jobs:
     - name: Install OpenAPI Generator CLI
       run: |
         wget https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/7.2.0/openapi-generator-cli-7.2.0.jar -O openapi-generator-cli.jar
-        echo "java -jar $(pwd)/openapi-generator-cli.jar \$@" > openapi-generator-cli
-        chmod +x openapi-generator-cli
-        sudo mv openapi-generator-cli /usr/local/bin/
 
     - name: Run generate.sh script
       run: |
         chmod +x ./generate.sh
         ./generate.sh
+        

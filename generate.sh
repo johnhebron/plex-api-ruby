@@ -11,7 +11,7 @@ SPEC_URL="https://github.com/LukeHagar/plex-api-spec/raw/main/plex-media-server-
 java -jar $GENERATOR_CLI_JAR generate \
   -i $SPEC_URL \
   -g ruby \
-  -o ./ \
+  -o ./plex-api-ruby-gem \
   -t ./custom_templates
 
 # Check for success

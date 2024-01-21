@@ -1,0 +1,12 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!generate.sh
+
+# ...and not these directories
+!/custom_templates/
+
+# Additionally, don't ignore files in custom_templates
+!/custom_templates/*

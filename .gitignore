@@ -4,6 +4,7 @@
 # But not these files...
 !.gitignore
 !generate.sh
+!README.md
 
 # ...and not these directories
 !/custom_templates/

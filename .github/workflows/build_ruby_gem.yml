@@ -39,7 +39,7 @@ jobs:
         # The email of the user that will be displayed as the author of the commit
         author_email: johnhebron@gmail.com
         # Additional arguments for the git commit command
-        # commit: --all -- ':!*.gitignore'
+        commit: -f
         # The name of the custom committer you want to use
         committer_name: John Hebron via GitHub Action
         # The email of the custom committer you want to use

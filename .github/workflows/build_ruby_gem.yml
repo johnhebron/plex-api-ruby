@@ -45,7 +45,7 @@ jobs:
         # The email of the custom committer you want to use
         committer_email: johnhebron@gmail.com
         # The directory where your repository is located. You should use actions/checkout first to set it up
-        cwd: /
+        cwd: /plex-api-ruby-gem
         # How the action should fill missing author name or email.
         # default_author: # optional, default is github_actor
         # Arguments for the git fetch command (if 'false', the action won't fetch the repo)

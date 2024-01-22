@@ -97,13 +97,13 @@ Class | Method | HTTP request | Description
 *OpenapiClient::ButlerApi* | [**start_task**](docs/ButlerApi.md#start_task) | **POST** /butler/{taskName} | Start a single Butler task
 *OpenapiClient::ButlerApi* | [**stop_all_tasks**](docs/ButlerApi.md#stop_all_tasks) | **DELETE** /butler | Stop all Butler tasks
 *OpenapiClient::ButlerApi* | [**stop_task**](docs/ButlerApi.md#stop_task) | **DELETE** /butler/{taskName} | Stop a single Butler task
-*OpenapiClient::DefaultApi* | [**library_sections_section_id_tag_get**](docs/DefaultApi.md#library_sections_section_id_tag_get) | **GET** /library/sections/{sectionId}/{tag} | Retrieve Information by Section and Tag
 *OpenapiClient::HubsApi* | [**get_global_hubs**](docs/HubsApi.md#get_global_hubs) | **GET** /hubs | Get Global Hubs
 *OpenapiClient::HubsApi* | [**get_library_hubs**](docs/HubsApi.md#get_library_hubs) | **GET** /hubs/sections/{sectionId} | Get library specific hubs
 *OpenapiClient::LibraryApi* | [**delete_library**](docs/LibraryApi.md#delete_library) | **DELETE** /library/sections/{sectionId} | Delete Library Section
 *OpenapiClient::LibraryApi* | [**get_file_hash**](docs/LibraryApi.md#get_file_hash) | **GET** /library/hashes | Get Hash Value
 *OpenapiClient::LibraryApi* | [**get_libraries**](docs/LibraryApi.md#get_libraries) | **GET** /library/sections | Get All Libraries
 *OpenapiClient::LibraryApi* | [**get_library**](docs/LibraryApi.md#get_library) | **GET** /library/sections/{sectionId} | Get Library Details
+*OpenapiClient::LibraryApi* | [**get_library_items**](docs/LibraryApi.md#get_library_items) | **GET** /library/sections/{sectionId}/{tag} | Get Library Items
 *OpenapiClient::LibraryApi* | [**get_metadata**](docs/LibraryApi.md#get_metadata) | **GET** /library/metadata/{ratingKey} | Get Items Metadata
 *OpenapiClient::LibraryApi* | [**get_metadata_children**](docs/LibraryApi.md#get_metadata_children) | **GET** /library/metadata/{ratingKey}/children | Get Items Children
 *OpenapiClient::LibraryApi* | [**get_on_deck**](docs/LibraryApi.md#get_on_deck) | **GET** /library/onDeck | Get On Deck
@@ -178,6 +178,14 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::GetLibrary200ResponseMediaContainerTypeInnerFieldInner](docs/GetLibrary200ResponseMediaContainerTypeInnerFieldInner.md)
  - [OpenapiClient::GetLibrary200ResponseMediaContainerTypeInnerFilterInner](docs/GetLibrary200ResponseMediaContainerTypeInnerFilterInner.md)
  - [OpenapiClient::GetLibrary200ResponseMediaContainerTypeInnerSortInner](docs/GetLibrary200ResponseMediaContainerTypeInnerSortInner.md)
+ - [OpenapiClient::GetLibraryItems200Response](docs/GetLibraryItems200Response.md)
+ - [OpenapiClient::GetLibraryItems200ResponseMediaContainer](docs/GetLibraryItems200ResponseMediaContainer.md)
+ - [OpenapiClient::GetLibraryItems200ResponseMediaContainerMetadataInner](docs/GetLibraryItems200ResponseMediaContainerMetadataInner.md)
+ - [OpenapiClient::GetLibraryItems200ResponseMediaContainerMetadataInnerDirectorInner](docs/GetLibraryItems200ResponseMediaContainerMetadataInnerDirectorInner.md)
+ - [OpenapiClient::GetLibraryItems200ResponseMediaContainerMetadataInnerGenreInner](docs/GetLibraryItems200ResponseMediaContainerMetadataInnerGenreInner.md)
+ - [OpenapiClient::GetLibraryItems200ResponseMediaContainerMetadataInnerMediaInner](docs/GetLibraryItems200ResponseMediaContainerMetadataInnerMediaInner.md)
+ - [OpenapiClient::GetLibraryItems200ResponseMediaContainerMetadataInnerMediaInnerPartInner](docs/GetLibraryItems200ResponseMediaContainerMetadataInnerMediaInnerPartInner.md)
+ - [OpenapiClient::GetLibraryItems200ResponseMediaContainerMetadataInnerRoleInner](docs/GetLibraryItems200ResponseMediaContainerMetadataInnerRoleInner.md)
  - [OpenapiClient::GetMetadata200Response](docs/GetMetadata200Response.md)
  - [OpenapiClient::GetMetadata200ResponseMediaContainer](docs/GetMetadata200ResponseMediaContainer.md)
  - [OpenapiClient::GetMetadata200ResponseMediaContainerMetadataInner](docs/GetMetadata200ResponseMediaContainerMetadataInner.md)
@@ -260,14 +268,6 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::GetUpdateStatus200Response](docs/GetUpdateStatus200Response.md)
  - [OpenapiClient::GetUpdateStatus200ResponseMediaContainer](docs/GetUpdateStatus200ResponseMediaContainer.md)
  - [OpenapiClient::GetUpdateStatus200ResponseMediaContainerReleaseInner](docs/GetUpdateStatus200ResponseMediaContainerReleaseInner.md)
- - [OpenapiClient::LibrarySectionsSectionIdTagGet200Response](docs/LibrarySectionsSectionIdTagGet200Response.md)
- - [OpenapiClient::LibrarySectionsSectionIdTagGet200ResponseMediaContainer](docs/LibrarySectionsSectionIdTagGet200ResponseMediaContainer.md)
- - [OpenapiClient::LibrarySectionsSectionIdTagGet200ResponseMediaContainerMetadataInner](docs/LibrarySectionsSectionIdTagGet200ResponseMediaContainerMetadataInner.md)
- - [OpenapiClient::LibrarySectionsSectionIdTagGet200ResponseMediaContainerMetadataInnerDirectorInner](docs/LibrarySectionsSectionIdTagGet200ResponseMediaContainerMetadataInnerDirectorInner.md)
- - [OpenapiClient::LibrarySectionsSectionIdTagGet200ResponseMediaContainerMetadataInnerGenreInner](docs/LibrarySectionsSectionIdTagGet200ResponseMediaContainerMetadataInnerGenreInner.md)
- - [OpenapiClient::LibrarySectionsSectionIdTagGet200ResponseMediaContainerMetadataInnerMediaInner](docs/LibrarySectionsSectionIdTagGet200ResponseMediaContainerMetadataInnerMediaInner.md)
- - [OpenapiClient::LibrarySectionsSectionIdTagGet200ResponseMediaContainerMetadataInnerMediaInnerPartInner](docs/LibrarySectionsSectionIdTagGet200ResponseMediaContainerMetadataInnerMediaInnerPartInner.md)
- - [OpenapiClient::LibrarySectionsSectionIdTagGet200ResponseMediaContainerMetadataInnerRoleInner](docs/LibrarySectionsSectionIdTagGet200ResponseMediaContainerMetadataInnerRoleInner.md)
 
 
 ## Documentation for Authorization

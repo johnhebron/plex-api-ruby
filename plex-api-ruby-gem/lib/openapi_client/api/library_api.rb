@@ -276,6 +276,80 @@ module OpenapiClient
       return data, status_code, headers
     end
 
+    # Get Library Items
+    # Fetches details from a specific section of the library identified by a section key and a tag. The tag parameter accepts the following values: - `all`: All items in the section. - `unwatched`: Items that have not been played. - `newest`: Items that are recently released. - `recentlyAdded`: Items that are recently added to the library. - `recentlyViewed`: Items that were recently viewed. - `onDeck`: Items to continue watching. - `collection`: Items categorized by collection. - `edition`: Items categorized by edition. - `genre`: Items categorized by genre. - `year`: Items categorized by year of release. - `decade`: Items categorized by decade. - `director`: Items categorized by director. - `actor`: Items categorized by starring actor. - `country`: Items categorized by country of origin. - `contentRating`: Items categorized by content rating. - `rating`: Items categorized by rating. - `resolution`: Items categorized by resolution. - `firstCharacter`: Items categorized by the first letter. - `folder`: Items categorized by folder. - `search?type=1`: Search functionality within the section. 
+    # @param section_id [Integer] the Id of the library to query
+    # @param tag [String] A key representing a specific tag within the section.
+    # @param [Hash] opts the optional parameters
+    # @return [GetLibraryItems200Response]
+    def get_library_items(section_id, tag, opts = {})
+      data, _status_code, _headers = get_library_items_with_http_info(section_id, tag, opts)
+      data
+    end
+
+    # Get Library Items
+    # Fetches details from a specific section of the library identified by a section key and a tag. The tag parameter accepts the following values: - &#x60;all&#x60;: All items in the section. - &#x60;unwatched&#x60;: Items that have not been played. - &#x60;newest&#x60;: Items that are recently released. - &#x60;recentlyAdded&#x60;: Items that are recently added to the library. - &#x60;recentlyViewed&#x60;: Items that were recently viewed. - &#x60;onDeck&#x60;: Items to continue watching. - &#x60;collection&#x60;: Items categorized by collection. - &#x60;edition&#x60;: Items categorized by edition. - &#x60;genre&#x60;: Items categorized by genre. - &#x60;year&#x60;: Items categorized by year of release. - &#x60;decade&#x60;: Items categorized by decade. - &#x60;director&#x60;: Items categorized by director. - &#x60;actor&#x60;: Items categorized by starring actor. - &#x60;country&#x60;: Items categorized by country of origin. - &#x60;contentRating&#x60;: Items categorized by content rating. - &#x60;rating&#x60;: Items categorized by rating. - &#x60;resolution&#x60;: Items categorized by resolution. - &#x60;firstCharacter&#x60;: Items categorized by the first letter. - &#x60;folder&#x60;: Items categorized by folder. - &#x60;search?type&#x3D;1&#x60;: Search functionality within the section. 
+    # @param section_id [Integer] the Id of the library to query
+    # @param tag [String] A key representing a specific tag within the section.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(GetLibraryItems200Response, Integer, Hash)>] GetLibraryItems200Response data, response status code and response headers
+    def get_library_items_with_http_info(section_id, tag, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: LibraryApi.get_library_items ...'
+      end
+      # verify the required parameter 'section_id' is set
+      if @api_client.config.client_side_validation && section_id.nil?
+        fail ArgumentError, "Missing the required parameter 'section_id' when calling LibraryApi.get_library_items"
+      end
+      # verify the required parameter 'tag' is set
+      if @api_client.config.client_side_validation && tag.nil?
+        fail ArgumentError, "Missing the required parameter 'tag' when calling LibraryApi.get_library_items"
+      end
+      # verify enum value
+      allowable_values = ["all", "unwatched", "newest", "recentlyAdded", "recentlyViewed", "onDeck", "collection", "edition", "genre", "year", "decade", "director", "actor", "country", "contentRating", "rating", "resolution", "firstCharacter", "folder", "search?type=1"]
+      if @api_client.config.client_side_validation && !allowable_values.include?(tag)
+        fail ArgumentError, "invalid value for \"tag\", must be one of #{allowable_values}"
+      end
+      # resource path
+      local_var_path = '/library/sections/{sectionId}/{tag}'.sub('{' + 'sectionId' + '}', CGI.escape(section_id.to_s)).sub('{' + 'tag' + '}', CGI.escape(tag.to_s))
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'GetLibraryItems200Response'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || ['accessToken']
+
+      new_options = opts.merge(
+        :operation => :"LibraryApi.get_library_items",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: LibraryApi#get_library_items\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get Items Metadata
     # This endpoint will return the metadata of a library item specified with the ratingKey. 
     # @param rating_key [Float] the id of the library item to return the children of.

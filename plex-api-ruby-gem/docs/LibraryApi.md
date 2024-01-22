@@ -8,6 +8,7 @@ All URIs are relative to *http://10.10.10.47:32400*
 | [**get_file_hash**](LibraryApi.md#get_file_hash) | **GET** /library/hashes | Get Hash Value |
 | [**get_libraries**](LibraryApi.md#get_libraries) | **GET** /library/sections | Get All Libraries |
 | [**get_library**](LibraryApi.md#get_library) | **GET** /library/sections/{sectionId} | Get Library Details |
+| [**get_library_items**](LibraryApi.md#get_library_items) | **GET** /library/sections/{sectionId}/{tag} | Get Library Items |
 | [**get_metadata**](LibraryApi.md#get_metadata) | **GET** /library/metadata/{ratingKey} | Get Items Metadata |
 | [**get_metadata_children**](LibraryApi.md#get_metadata_children) | **GET** /library/metadata/{ratingKey}/children | Get Items Children |
 | [**get_on_deck**](LibraryApi.md#get_on_deck) | **GET** /library/onDeck | Get On Deck |
@@ -291,6 +292,79 @@ end
 ### Return type
 
 [**GetLibrary200Response**](GetLibrary200Response.md)
+
+### Authorization
+
+[accessToken](../README.md#accessToken)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## get_library_items
+
+> <GetLibraryItems200Response> get_library_items(section_id, tag)
+
+Get Library Items
+
+Fetches details from a specific section of the library identified by a section key and a tag. The tag parameter accepts the following values: - `all`: All items in the section. - `unwatched`: Items that have not been played. - `newest`: Items that are recently released. - `recentlyAdded`: Items that are recently added to the library. - `recentlyViewed`: Items that were recently viewed. - `onDeck`: Items to continue watching. - `collection`: Items categorized by collection. - `edition`: Items categorized by edition. - `genre`: Items categorized by genre. - `year`: Items categorized by year of release. - `decade`: Items categorized by decade. - `director`: Items categorized by director. - `actor`: Items categorized by starring actor. - `country`: Items categorized by country of origin. - `contentRating`: Items categorized by content rating. - `rating`: Items categorized by rating. - `resolution`: Items categorized by resolution. - `firstCharacter`: Items categorized by the first letter. - `folder`: Items categorized by folder. - `search?type=1`: Search functionality within the section. 
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+# setup authorization
+OpenapiClient.configure do |config|
+  # Configure API key authorization: accessToken
+  config.api_key['accessToken'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['accessToken'] = 'Bearer'
+end
+
+api_instance = OpenapiClient::LibraryApi.new
+section_id = 56 # Integer | the Id of the library to query
+tag = 'all' # String | A key representing a specific tag within the section.
+
+begin
+  # Get Library Items
+  result = api_instance.get_library_items(section_id, tag)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling LibraryApi->get_library_items: #{e}"
+end
+```
+
+#### Using the get_library_items_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<GetLibraryItems200Response>, Integer, Hash)> get_library_items_with_http_info(section_id, tag)
+
+```ruby
+begin
+  # Get Library Items
+  data, status_code, headers = api_instance.get_library_items_with_http_info(section_id, tag)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <GetLibraryItems200Response>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling LibraryApi->get_library_items_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **section_id** | **Integer** | the Id of the library to query |  |
+| **tag** | **String** | A key representing a specific tag within the section. |  |
+
+### Return type
+
+[**GetLibraryItems200Response**](GetLibraryItems200Response.md)
 
 ### Authorization
 

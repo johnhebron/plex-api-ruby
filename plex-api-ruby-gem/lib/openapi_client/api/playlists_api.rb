@@ -479,7 +479,7 @@ module OpenapiClient
         fail ArgumentError, "invalid value for \"smart\", must be one of #{allowable_values}"
       end
       # resource path
-      local_var_path = '/playlists/all'
+      local_var_path = '/playlists'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -592,7 +592,7 @@ module OpenapiClient
     # Upload Playlist
     # Imports m3u playlists by passing a path on the server to scan for m3u-formatted playlist files, or a path to a single playlist file. 
     # @param path [String] absolute path to a directory on the server where m3u files are stored, or the absolute path to a playlist file on the server.  If the &#x60;path&#x60; argument is a directory, that path will be scanned for playlist files to be processed.  Each file in that directory creates a separate playlist, with a name based on the filename of the file that created it.  The GUID of each playlist is based on the filename.  If the &#x60;path&#x60; argument is a file, that file will be used to create a new playlist, with the name based on the filename of the file that created it.  The GUID of each playlist is based on the filename. 
-    # @param force [Integer] force overwriting of duplicate playlists. By default, a playlist file uploaded with the same path will overwrite the existing playlist.  The &#x60;force&#x60; argument is used to disable overwriting. If the &#x60;force&#x60; argument is set to 0, a new playlist will be created suffixed with the date and time that the duplicate was uploaded. 
+    # @param force [Integer] Force overwriting of duplicate playlists.   By default, a playlist file uploaded with the same path will overwrite the existing playlist.  The &#x60;force&#x60; argument is used to disable overwriting.   If the &#x60;force&#x60; argument is set to 0, a new playlist will be created suffixed with the date and time that the duplicate was uploaded. 
     # @param [Hash] opts the optional parameters
     # @return [nil]
     def upload_playlist(path, force, opts = {})
@@ -603,7 +603,7 @@ module OpenapiClient
     # Upload Playlist
     # Imports m3u playlists by passing a path on the server to scan for m3u-formatted playlist files, or a path to a single playlist file. 
     # @param path [String] absolute path to a directory on the server where m3u files are stored, or the absolute path to a playlist file on the server.  If the &#x60;path&#x60; argument is a directory, that path will be scanned for playlist files to be processed.  Each file in that directory creates a separate playlist, with a name based on the filename of the file that created it.  The GUID of each playlist is based on the filename.  If the &#x60;path&#x60; argument is a file, that file will be used to create a new playlist, with the name based on the filename of the file that created it.  The GUID of each playlist is based on the filename. 
-    # @param force [Integer] force overwriting of duplicate playlists. By default, a playlist file uploaded with the same path will overwrite the existing playlist.  The &#x60;force&#x60; argument is used to disable overwriting. If the &#x60;force&#x60; argument is set to 0, a new playlist will be created suffixed with the date and time that the duplicate was uploaded. 
+    # @param force [Integer] Force overwriting of duplicate playlists.   By default, a playlist file uploaded with the same path will overwrite the existing playlist.  The &#x60;force&#x60; argument is used to disable overwriting.   If the &#x60;force&#x60; argument is set to 0, a new playlist will be created suffixed with the date and time that the duplicate was uploaded. 
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
     def upload_playlist_with_http_info(path, force, opts = {})

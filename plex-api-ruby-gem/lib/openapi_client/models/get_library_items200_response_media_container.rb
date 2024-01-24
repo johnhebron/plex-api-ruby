@@ -43,6 +43,8 @@ module OpenapiClient
 
     attr_accessor :view_mode
 
+    attr_accessor :mixed_parents
+
     attr_accessor :metadata
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -62,6 +64,7 @@ module OpenapiClient
         :'title2' => :'title2',
         :'view_group' => :'viewGroup',
         :'view_mode' => :'viewMode',
+        :'mixed_parents' => :'mixedParents',
         :'metadata' => :'Metadata'
       }
     end
@@ -88,6 +91,7 @@ module OpenapiClient
         :'title2' => :'String',
         :'view_group' => :'String',
         :'view_mode' => :'Integer',
+        :'mixed_parents' => :'Boolean',
         :'metadata' => :'Array<GetLibraryItems200ResponseMediaContainerMetadataInner>'
       }
     end
@@ -169,6 +173,10 @@ module OpenapiClient
         self.view_mode = attributes[:'view_mode']
       end
 
+      if attributes.key?(:'mixed_parents')
+        self.mixed_parents = attributes[:'mixed_parents']
+      end
+
       if attributes.key?(:'metadata')
         if (value = attributes[:'metadata']).is_a?(Array)
           self.metadata = value
@@ -210,6 +218,7 @@ module OpenapiClient
           title2 == o.title2 &&
           view_group == o.view_group &&
           view_mode == o.view_mode &&
+          mixed_parents == o.mixed_parents &&
           metadata == o.metadata
     end
 
@@ -222,7 +231,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [size, allow_sync, art, identifier, library_section_id, library_section_title, library_section_uuid, media_tag_prefix, media_tag_version, thumb, title1, title2, view_group, view_mode, metadata].hash
+      [size, allow_sync, art, identifier, library_section_id, library_section_title, library_section_uuid, media_tag_prefix, media_tag_version, thumb, title1, title2, view_group, view_mode, mixed_parents, metadata].hash
     end
 
     # Builds the object from hash

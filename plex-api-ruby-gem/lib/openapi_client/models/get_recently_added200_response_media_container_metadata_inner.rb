@@ -155,7 +155,7 @@ module OpenapiClient
         :'genre' => :'Array<GetRecentlyAdded200ResponseMediaContainerMetadataInnerGenreInner>',
         :'director' => :'Array<GetRecentlyAdded200ResponseMediaContainerMetadataInnerDirectorInner>',
         :'writer' => :'Array<GetRecentlyAdded200ResponseMediaContainerMetadataInnerWriterInner>',
-        :'country' => :'Array<GetRecentlyAdded200ResponseMediaContainerMetadataInnerCountryInner>',
+        :'country' => :'Array<GetLibraryHubs200ResponseMediaContainerHubInnerMetadataInnerCountryInner>',
         :'role' => :'Array<GetRecentlyAdded200ResponseMediaContainerMetadataInnerRoleInner>'
       }
     end

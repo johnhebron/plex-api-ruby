@@ -24,10 +24,10 @@ module OpenapiClient
     # @param [Hash] opts the optional parameters
     # @option opts [Float] :count The number of items to return with each hub.
     # @option opts [Integer] :only_transient Only return hubs which are \&quot;transient\&quot;, meaning those which are prone to changing after media playback or addition (e.g. On Deck, or Recently Added).
-    # @return [nil]
+    # @return [GetGlobalHubs200Response]
     def get_global_hubs(opts = {})
-      get_global_hubs_with_http_info(opts)
-      nil
+      data, _status_code, _headers = get_global_hubs_with_http_info(opts)
+      data
     end
 
     # Get Global Hubs
@@ -35,7 +35,7 @@ module OpenapiClient
     # @param [Hash] opts the optional parameters
     # @option opts [Float] :count The number of items to return with each hub.
     # @option opts [Integer] :only_transient Only return hubs which are \&quot;transient\&quot;, meaning those which are prone to changing after media playback or addition (e.g. On Deck, or Recently Added).
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
+    # @return [Array<(GetGlobalHubs200Response, Integer, Hash)>] GetGlobalHubs200Response data, response status code and response headers
     def get_global_hubs_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: HubsApi.get_global_hubs ...'
@@ -64,7 +64,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'GetGlobalHubs200Response'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['accessToken']
@@ -92,10 +92,10 @@ module OpenapiClient
     # @param [Hash] opts the optional parameters
     # @option opts [Float] :count The number of items to return with each hub.
     # @option opts [Integer] :only_transient Only return hubs which are \&quot;transient\&quot;, meaning those which are prone to changing after media playback or addition (e.g. On Deck, or Recently Added).
-    # @return [nil]
+    # @return [GetLibraryHubs200Response]
     def get_library_hubs(section_id, opts = {})
-      get_library_hubs_with_http_info(section_id, opts)
-      nil
+      data, _status_code, _headers = get_library_hubs_with_http_info(section_id, opts)
+      data
     end
 
     # Get library specific hubs
@@ -104,7 +104,7 @@ module OpenapiClient
     # @param [Hash] opts the optional parameters
     # @option opts [Float] :count The number of items to return with each hub.
     # @option opts [Integer] :only_transient Only return hubs which are \&quot;transient\&quot;, meaning those which are prone to changing after media playback or addition (e.g. On Deck, or Recently Added).
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
+    # @return [Array<(GetLibraryHubs200Response, Integer, Hash)>] GetLibraryHubs200Response data, response status code and response headers
     def get_library_hubs_with_http_info(section_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: HubsApi.get_library_hubs ...'
@@ -137,7 +137,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'GetLibraryHubs200Response'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['accessToken']

@@ -10,7 +10,7 @@ All URIs are relative to *http://10.10.10.47:32400*
 | [**delete_playlist**](PlaylistsApi.md#delete_playlist) | **DELETE** /playlists/{playlistID} | Deletes a Playlist |
 | [**get_playlist**](PlaylistsApi.md#get_playlist) | **GET** /playlists/{playlistID} | Retrieve Playlist |
 | [**get_playlist_contents**](PlaylistsApi.md#get_playlist_contents) | **GET** /playlists/{playlistID}/items | Retrieve Playlist Contents |
-| [**get_playlists**](PlaylistsApi.md#get_playlists) | **GET** /playlists/all | Get All Playlists |
+| [**get_playlists**](PlaylistsApi.md#get_playlists) | **GET** /playlists | Get All Playlists |
 | [**update_playlist**](PlaylistsApi.md#update_playlist) | **PUT** /playlists/{playlistID} | Update a Playlist |
 | [**upload_playlist**](PlaylistsApi.md#upload_playlist) | **POST** /playlists/upload | Upload Playlist |
 
@@ -631,7 +631,7 @@ end
 
 api_instance = OpenapiClient::PlaylistsApi.new
 path = '/home/barkley/playlist.m3u' # String | absolute path to a directory on the server where m3u files are stored, or the absolute path to a playlist file on the server.  If the `path` argument is a directory, that path will be scanned for playlist files to be processed.  Each file in that directory creates a separate playlist, with a name based on the filename of the file that created it.  The GUID of each playlist is based on the filename.  If the `path` argument is a file, that file will be used to create a new playlist, with the name based on the filename of the file that created it.  The GUID of each playlist is based on the filename. 
-force = 0 # Integer | force overwriting of duplicate playlists. By default, a playlist file uploaded with the same path will overwrite the existing playlist.  The `force` argument is used to disable overwriting. If the `force` argument is set to 0, a new playlist will be created suffixed with the date and time that the duplicate was uploaded. 
+force = 0 # Integer | Force overwriting of duplicate playlists.   By default, a playlist file uploaded with the same path will overwrite the existing playlist.  The `force` argument is used to disable overwriting.   If the `force` argument is set to 0, a new playlist will be created suffixed with the date and time that the duplicate was uploaded. 
 
 begin
   # Upload Playlist
@@ -664,7 +664,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **path** | **String** | absolute path to a directory on the server where m3u files are stored, or the absolute path to a playlist file on the server.  If the &#x60;path&#x60; argument is a directory, that path will be scanned for playlist files to be processed.  Each file in that directory creates a separate playlist, with a name based on the filename of the file that created it.  The GUID of each playlist is based on the filename.  If the &#x60;path&#x60; argument is a file, that file will be used to create a new playlist, with the name based on the filename of the file that created it.  The GUID of each playlist is based on the filename.  |  |
-| **force** | **Integer** | force overwriting of duplicate playlists. By default, a playlist file uploaded with the same path will overwrite the existing playlist.  The &#x60;force&#x60; argument is used to disable overwriting. If the &#x60;force&#x60; argument is set to 0, a new playlist will be created suffixed with the date and time that the duplicate was uploaded.  |  |
+| **force** | **Integer** | Force overwriting of duplicate playlists.   By default, a playlist file uploaded with the same path will overwrite the existing playlist.  The &#x60;force&#x60; argument is used to disable overwriting.   If the &#x60;force&#x60; argument is set to 0, a new playlist will be created suffixed with the date and time that the duplicate was uploaded.  |  |
 
 ### Return type
 

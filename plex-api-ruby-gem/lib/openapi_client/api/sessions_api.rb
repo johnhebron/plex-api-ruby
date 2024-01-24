@@ -22,16 +22,16 @@ module OpenapiClient
     # Get Session History
     # This will Retrieve a listing of all history views.
     # @param [Hash] opts the optional parameters
-    # @return [nil]
+    # @return [GetSessionHistory200Response]
     def get_session_history(opts = {})
-      get_session_history_with_http_info(opts)
-      nil
+      data, _status_code, _headers = get_session_history_with_http_info(opts)
+      data
     end
 
     # Get Session History
     # This will Retrieve a listing of all history views.
     # @param [Hash] opts the optional parameters
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
+    # @return [Array<(GetSessionHistory200Response, Integer, Hash)>] GetSessionHistory200Response data, response status code and response headers
     def get_session_history_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: SessionsApi.get_session_history ...'
@@ -54,7 +54,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'GetSessionHistory200Response'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['accessToken']
@@ -79,16 +79,16 @@ module OpenapiClient
     # Get Active Sessions
     # This will retrieve the \"Now Playing\" Information of the PMS.
     # @param [Hash] opts the optional parameters
-    # @return [nil]
+    # @return [GetSessions200Response]
     def get_sessions(opts = {})
-      get_sessions_with_http_info(opts)
-      nil
+      data, _status_code, _headers = get_sessions_with_http_info(opts)
+      data
     end
 
     # Get Active Sessions
     # This will retrieve the \&quot;Now Playing\&quot; Information of the PMS.
     # @param [Hash] opts the optional parameters
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
+    # @return [Array<(GetSessions200Response, Integer, Hash)>] GetSessions200Response data, response status code and response headers
     def get_sessions_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: SessionsApi.get_sessions ...'
@@ -111,7 +111,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'GetSessions200Response'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['accessToken']

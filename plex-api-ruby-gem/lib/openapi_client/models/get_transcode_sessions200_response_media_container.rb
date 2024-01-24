@@ -35,7 +35,7 @@ module OpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'size' => :'Float',
+        :'size' => :'Integer',
         :'transcode_session' => :'Array<GetTranscodeSessions200ResponseMediaContainerTranscodeSessionInner>'
       }
     end

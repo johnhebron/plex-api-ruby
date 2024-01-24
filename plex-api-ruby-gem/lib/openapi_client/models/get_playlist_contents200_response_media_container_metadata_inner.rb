@@ -153,7 +153,7 @@ module OpenapiClient
         :'rating_image' => :'String',
         :'media' => :'Array<GetPlaylistContents200ResponseMediaContainerMetadataInnerMediaInner>',
         :'genre' => :'Array<GetPlaylistContents200ResponseMediaContainerMetadataInnerGenreInner>',
-        :'country' => :'Array<GetRecentlyAdded200ResponseMediaContainerMetadataInnerCountryInner>',
+        :'country' => :'Array<GetLibraryHubs200ResponseMediaContainerHubInnerMetadataInnerCountryInner>',
         :'director' => :'Array<GetPlaylistContents200ResponseMediaContainerMetadataInnerDirectorInner>',
         :'writer' => :'Array<GetPlaylistContents200ResponseMediaContainerMetadataInnerDirectorInner>',
         :'role' => :'Array<GetPlaylistContents200ResponseMediaContainerMetadataInnerRoleInner>'

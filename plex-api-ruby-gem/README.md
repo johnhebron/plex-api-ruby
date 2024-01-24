@@ -109,6 +109,7 @@ Class | Method | HTTP request | Description
 *OpenapiClient::LibraryApi* | [**get_on_deck**](docs/LibraryApi.md#get_on_deck) | **GET** /library/onDeck | Get On Deck
 *OpenapiClient::LibraryApi* | [**get_recently_added**](docs/LibraryApi.md#get_recently_added) | **GET** /library/recentlyAdded | Get Recently Added
 *OpenapiClient::LibraryApi* | [**refresh_library**](docs/LibraryApi.md#refresh_library) | **GET** /library/sections/{sectionId}/refresh | Refresh Library
+*OpenapiClient::LibraryApi* | [**search_library**](docs/LibraryApi.md#search_library) | **GET** /library/sections/{sectionId}/search | Search Library
 *OpenapiClient::LogApi* | [**enable_paper_trail**](docs/LogApi.md#enable_paper_trail) | **GET** /log/networked | Enabling Papertrail
 *OpenapiClient::LogApi* | [**log_line**](docs/LogApi.md#log_line) | **GET** /log | Logging a single line message.
 *OpenapiClient::LogApi* | [**log_multi_line**](docs/LogApi.md#log_multi_line) | **POST** /log | Logging a multi-line message
@@ -121,7 +122,7 @@ Class | Method | HTTP request | Description
 *OpenapiClient::PlaylistsApi* | [**delete_playlist**](docs/PlaylistsApi.md#delete_playlist) | **DELETE** /playlists/{playlistID} | Deletes a Playlist
 *OpenapiClient::PlaylistsApi* | [**get_playlist**](docs/PlaylistsApi.md#get_playlist) | **GET** /playlists/{playlistID} | Retrieve Playlist
 *OpenapiClient::PlaylistsApi* | [**get_playlist_contents**](docs/PlaylistsApi.md#get_playlist_contents) | **GET** /playlists/{playlistID}/items | Retrieve Playlist Contents
-*OpenapiClient::PlaylistsApi* | [**get_playlists**](docs/PlaylistsApi.md#get_playlists) | **GET** /playlists/all | Get All Playlists
+*OpenapiClient::PlaylistsApi* | [**get_playlists**](docs/PlaylistsApi.md#get_playlists) | **GET** /playlists | Get All Playlists
 *OpenapiClient::PlaylistsApi* | [**update_playlist**](docs/PlaylistsApi.md#update_playlist) | **PUT** /playlists/{playlistID} | Update a Playlist
 *OpenapiClient::PlaylistsApi* | [**upload_playlist**](docs/PlaylistsApi.md#upload_playlist) | **POST** /playlists/upload | Upload Playlist
 *OpenapiClient::SearchApi* | [**get_search_results**](docs/SearchApi.md#get_search_results) | **GET** /search | Get Search Results
@@ -165,6 +166,10 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::GetDevices200Response](docs/GetDevices200Response.md)
  - [OpenapiClient::GetDevices200ResponseMediaContainer](docs/GetDevices200ResponseMediaContainer.md)
  - [OpenapiClient::GetDevices200ResponseMediaContainerDeviceInner](docs/GetDevices200ResponseMediaContainerDeviceInner.md)
+ - [OpenapiClient::GetGlobalHubs200Response](docs/GetGlobalHubs200Response.md)
+ - [OpenapiClient::GetGlobalHubs200ResponseMediaContainer](docs/GetGlobalHubs200ResponseMediaContainer.md)
+ - [OpenapiClient::GetGlobalHubs200ResponseMediaContainerHubInner](docs/GetGlobalHubs200ResponseMediaContainerHubInner.md)
+ - [OpenapiClient::GetGlobalHubs200ResponseMediaContainerHubInnerMetadataInner](docs/GetGlobalHubs200ResponseMediaContainerHubInnerMetadataInner.md)
  - [OpenapiClient::GetLibraries200Response](docs/GetLibraries200Response.md)
  - [OpenapiClient::GetLibraries200ResponseMediaContainer](docs/GetLibraries200ResponseMediaContainer.md)
  - [OpenapiClient::GetLibraries200ResponseMediaContainerDirectoryInner](docs/GetLibraries200ResponseMediaContainerDirectoryInner.md)
@@ -178,6 +183,17 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::GetLibrary200ResponseMediaContainerTypeInnerFieldInner](docs/GetLibrary200ResponseMediaContainerTypeInnerFieldInner.md)
  - [OpenapiClient::GetLibrary200ResponseMediaContainerTypeInnerFilterInner](docs/GetLibrary200ResponseMediaContainerTypeInnerFilterInner.md)
  - [OpenapiClient::GetLibrary200ResponseMediaContainerTypeInnerSortInner](docs/GetLibrary200ResponseMediaContainerTypeInnerSortInner.md)
+ - [OpenapiClient::GetLibraryHubs200Response](docs/GetLibraryHubs200Response.md)
+ - [OpenapiClient::GetLibraryHubs200ResponseMediaContainer](docs/GetLibraryHubs200ResponseMediaContainer.md)
+ - [OpenapiClient::GetLibraryHubs200ResponseMediaContainerHubInner](docs/GetLibraryHubs200ResponseMediaContainerHubInner.md)
+ - [OpenapiClient::GetLibraryHubs200ResponseMediaContainerHubInnerMetadataInner](docs/GetLibraryHubs200ResponseMediaContainerHubInnerMetadataInner.md)
+ - [OpenapiClient::GetLibraryHubs200ResponseMediaContainerHubInnerMetadataInnerCountryInner](docs/GetLibraryHubs200ResponseMediaContainerHubInnerMetadataInnerCountryInner.md)
+ - [OpenapiClient::GetLibraryHubs200ResponseMediaContainerHubInnerMetadataInnerDirectorInner](docs/GetLibraryHubs200ResponseMediaContainerHubInnerMetadataInnerDirectorInner.md)
+ - [OpenapiClient::GetLibraryHubs200ResponseMediaContainerHubInnerMetadataInnerGenreInner](docs/GetLibraryHubs200ResponseMediaContainerHubInnerMetadataInnerGenreInner.md)
+ - [OpenapiClient::GetLibraryHubs200ResponseMediaContainerHubInnerMetadataInnerMediaInner](docs/GetLibraryHubs200ResponseMediaContainerHubInnerMetadataInnerMediaInner.md)
+ - [OpenapiClient::GetLibraryHubs200ResponseMediaContainerHubInnerMetadataInnerMediaInnerPartInner](docs/GetLibraryHubs200ResponseMediaContainerHubInnerMetadataInnerMediaInnerPartInner.md)
+ - [OpenapiClient::GetLibraryHubs200ResponseMediaContainerHubInnerMetadataInnerRoleInner](docs/GetLibraryHubs200ResponseMediaContainerHubInnerMetadataInnerRoleInner.md)
+ - [OpenapiClient::GetLibraryHubs200ResponseMediaContainerHubInnerMetadataInnerWriterInner](docs/GetLibraryHubs200ResponseMediaContainerHubInnerMetadataInnerWriterInner.md)
  - [OpenapiClient::GetLibraryItems200Response](docs/GetLibraryItems200Response.md)
  - [OpenapiClient::GetLibraryItems200ResponseMediaContainer](docs/GetLibraryItems200ResponseMediaContainer.md)
  - [OpenapiClient::GetLibraryItems200ResponseMediaContainerMetadataInner](docs/GetLibraryItems200ResponseMediaContainerMetadataInner.md)
@@ -230,7 +246,6 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::GetRecentlyAdded200Response](docs/GetRecentlyAdded200Response.md)
  - [OpenapiClient::GetRecentlyAdded200ResponseMediaContainer](docs/GetRecentlyAdded200ResponseMediaContainer.md)
  - [OpenapiClient::GetRecentlyAdded200ResponseMediaContainerMetadataInner](docs/GetRecentlyAdded200ResponseMediaContainerMetadataInner.md)
- - [OpenapiClient::GetRecentlyAdded200ResponseMediaContainerMetadataInnerCountryInner](docs/GetRecentlyAdded200ResponseMediaContainerMetadataInnerCountryInner.md)
  - [OpenapiClient::GetRecentlyAdded200ResponseMediaContainerMetadataInnerDirectorInner](docs/GetRecentlyAdded200ResponseMediaContainerMetadataInnerDirectorInner.md)
  - [OpenapiClient::GetRecentlyAdded200ResponseMediaContainerMetadataInnerGenreInner](docs/GetRecentlyAdded200ResponseMediaContainerMetadataInnerGenreInner.md)
  - [OpenapiClient::GetRecentlyAdded200ResponseMediaContainerMetadataInnerMediaInner](docs/GetRecentlyAdded200ResponseMediaContainerMetadataInnerMediaInner.md)
@@ -262,12 +277,27 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::GetServerList200ResponseMediaContainerServerInner](docs/GetServerList200ResponseMediaContainerServerInner.md)
  - [OpenapiClient::GetServerPreferences200Response](docs/GetServerPreferences200Response.md)
  - [OpenapiClient::GetServerPreferences200ResponseMediaContainer](docs/GetServerPreferences200ResponseMediaContainer.md)
+ - [OpenapiClient::GetSessionHistory200Response](docs/GetSessionHistory200Response.md)
+ - [OpenapiClient::GetSessionHistory200ResponseMediaContainer](docs/GetSessionHistory200ResponseMediaContainer.md)
+ - [OpenapiClient::GetSessionHistory200ResponseMediaContainerMetadataInner](docs/GetSessionHistory200ResponseMediaContainerMetadataInner.md)
+ - [OpenapiClient::GetSessions200Response](docs/GetSessions200Response.md)
+ - [OpenapiClient::GetSessions200ResponseMediaContainer](docs/GetSessions200ResponseMediaContainer.md)
+ - [OpenapiClient::GetSessions200ResponseMediaContainerMetadataInner](docs/GetSessions200ResponseMediaContainerMetadataInner.md)
+ - [OpenapiClient::GetSessions200ResponseMediaContainerMetadataInnerMediaInner](docs/GetSessions200ResponseMediaContainerMetadataInnerMediaInner.md)
+ - [OpenapiClient::GetSessions200ResponseMediaContainerMetadataInnerMediaInnerPartInner](docs/GetSessions200ResponseMediaContainerMetadataInnerMediaInnerPartInner.md)
+ - [OpenapiClient::GetSessions200ResponseMediaContainerMetadataInnerMediaInnerPartInnerStreamInner](docs/GetSessions200ResponseMediaContainerMetadataInnerMediaInnerPartInnerStreamInner.md)
+ - [OpenapiClient::GetSessions200ResponseMediaContainerMetadataInnerPlayer](docs/GetSessions200ResponseMediaContainerMetadataInnerPlayer.md)
+ - [OpenapiClient::GetSessions200ResponseMediaContainerMetadataInnerSession](docs/GetSessions200ResponseMediaContainerMetadataInnerSession.md)
+ - [OpenapiClient::GetSessions200ResponseMediaContainerMetadataInnerUser](docs/GetSessions200ResponseMediaContainerMetadataInnerUser.md)
  - [OpenapiClient::GetTranscodeSessions200Response](docs/GetTranscodeSessions200Response.md)
  - [OpenapiClient::GetTranscodeSessions200ResponseMediaContainer](docs/GetTranscodeSessions200ResponseMediaContainer.md)
  - [OpenapiClient::GetTranscodeSessions200ResponseMediaContainerTranscodeSessionInner](docs/GetTranscodeSessions200ResponseMediaContainerTranscodeSessionInner.md)
  - [OpenapiClient::GetUpdateStatus200Response](docs/GetUpdateStatus200Response.md)
  - [OpenapiClient::GetUpdateStatus200ResponseMediaContainer](docs/GetUpdateStatus200ResponseMediaContainer.md)
  - [OpenapiClient::GetUpdateStatus200ResponseMediaContainerReleaseInner](docs/GetUpdateStatus200ResponseMediaContainerReleaseInner.md)
+ - [OpenapiClient::SearchLibrary200Response](docs/SearchLibrary200Response.md)
+ - [OpenapiClient::SearchLibrary200ResponseMediaContainer](docs/SearchLibrary200ResponseMediaContainer.md)
+ - [OpenapiClient::SearchLibrary200ResponseMediaContainerMetadataInner](docs/SearchLibrary200ResponseMediaContainerMetadataInner.md)
 
 
 ## Documentation for Authorization

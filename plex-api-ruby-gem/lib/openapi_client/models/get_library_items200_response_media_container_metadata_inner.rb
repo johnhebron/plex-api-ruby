@@ -59,6 +59,20 @@ module OpenapiClient
 
     attr_accessor :rating_image
 
+    attr_accessor :grandparent_rating_key
+
+    attr_accessor :grandparent_guid
+
+    attr_accessor :grandparent_key
+
+    attr_accessor :grandparent_title
+
+    attr_accessor :grandparent_thumb
+
+    attr_accessor :grandparent_art
+
+    attr_accessor :grandparent_theme
+
     attr_accessor :media
 
     attr_accessor :genre
@@ -82,6 +96,38 @@ module OpenapiClient
     attr_accessor :view_offset
 
     attr_accessor :skip_count
+
+    attr_accessor :index
+
+    attr_accessor :theme
+
+    attr_accessor :leaf_count
+
+    attr_accessor :viewed_leaf_count
+
+    attr_accessor :child_count
+
+    attr_accessor :has_premium_extras
+
+    attr_accessor :has_premium_primary_extra
+
+    attr_accessor :parent_rating_key
+
+    attr_accessor :parent_guid
+
+    attr_accessor :parent_studio
+
+    attr_accessor :parent_key
+
+    attr_accessor :parent_title
+
+    attr_accessor :parent_index
+
+    attr_accessor :parent_year
+
+    attr_accessor :parent_thumb
+
+    attr_accessor :parent_theme
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -108,6 +154,13 @@ module OpenapiClient
         :'chapter_source' => :'chapterSource',
         :'primary_extra_key' => :'primaryExtraKey',
         :'rating_image' => :'ratingImage',
+        :'grandparent_rating_key' => :'grandparentRatingKey',
+        :'grandparent_guid' => :'grandparentGuid',
+        :'grandparent_key' => :'grandparentKey',
+        :'grandparent_title' => :'grandparentTitle',
+        :'grandparent_thumb' => :'grandparentThumb',
+        :'grandparent_art' => :'grandparentArt',
+        :'grandparent_theme' => :'grandparentTheme',
         :'media' => :'Media',
         :'genre' => :'Genre',
         :'country' => :'Country',
@@ -119,7 +172,23 @@ module OpenapiClient
         :'last_viewed_at' => :'lastViewedAt',
         :'original_title' => :'originalTitle',
         :'view_offset' => :'viewOffset',
-        :'skip_count' => :'skipCount'
+        :'skip_count' => :'skipCount',
+        :'index' => :'index',
+        :'theme' => :'theme',
+        :'leaf_count' => :'leafCount',
+        :'viewed_leaf_count' => :'viewedLeafCount',
+        :'child_count' => :'childCount',
+        :'has_premium_extras' => :'hasPremiumExtras',
+        :'has_premium_primary_extra' => :'hasPremiumPrimaryExtra',
+        :'parent_rating_key' => :'parentRatingKey',
+        :'parent_guid' => :'parentGuid',
+        :'parent_studio' => :'parentStudio',
+        :'parent_key' => :'parentKey',
+        :'parent_title' => :'parentTitle',
+        :'parent_index' => :'parentIndex',
+        :'parent_year' => :'parentYear',
+        :'parent_thumb' => :'parentThumb',
+        :'parent_theme' => :'parentTheme'
       }
     end
 
@@ -153,9 +222,16 @@ module OpenapiClient
         :'chapter_source' => :'String',
         :'primary_extra_key' => :'String',
         :'rating_image' => :'String',
+        :'grandparent_rating_key' => :'String',
+        :'grandparent_guid' => :'String',
+        :'grandparent_key' => :'String',
+        :'grandparent_title' => :'String',
+        :'grandparent_thumb' => :'String',
+        :'grandparent_art' => :'String',
+        :'grandparent_theme' => :'String',
         :'media' => :'Array<GetLibraryItems200ResponseMediaContainerMetadataInnerMediaInner>',
         :'genre' => :'Array<GetLibraryItems200ResponseMediaContainerMetadataInnerGenreInner>',
-        :'country' => :'Array<GetRecentlyAdded200ResponseMediaContainerMetadataInnerCountryInner>',
+        :'country' => :'Array<GetLibraryHubs200ResponseMediaContainerHubInnerMetadataInnerCountryInner>',
         :'director' => :'Array<GetLibraryItems200ResponseMediaContainerMetadataInnerDirectorInner>',
         :'writer' => :'Array<GetLibraryItems200ResponseMediaContainerMetadataInnerDirectorInner>',
         :'role' => :'Array<GetLibraryItems200ResponseMediaContainerMetadataInnerRoleInner>',
@@ -164,7 +240,23 @@ module OpenapiClient
         :'last_viewed_at' => :'Integer',
         :'original_title' => :'String',
         :'view_offset' => :'Integer',
-        :'skip_count' => :'Integer'
+        :'skip_count' => :'Integer',
+        :'index' => :'Integer',
+        :'theme' => :'String',
+        :'leaf_count' => :'Integer',
+        :'viewed_leaf_count' => :'Integer',
+        :'child_count' => :'Integer',
+        :'has_premium_extras' => :'String',
+        :'has_premium_primary_extra' => :'String',
+        :'parent_rating_key' => :'String',
+        :'parent_guid' => :'String',
+        :'parent_studio' => :'String',
+        :'parent_key' => :'String',
+        :'parent_title' => :'String',
+        :'parent_index' => :'Integer',
+        :'parent_year' => :'Integer',
+        :'parent_thumb' => :'String',
+        :'parent_theme' => :'String'
       }
     end
 
@@ -277,6 +369,34 @@ module OpenapiClient
         self.rating_image = attributes[:'rating_image']
       end
 
+      if attributes.key?(:'grandparent_rating_key')
+        self.grandparent_rating_key = attributes[:'grandparent_rating_key']
+      end
+
+      if attributes.key?(:'grandparent_guid')
+        self.grandparent_guid = attributes[:'grandparent_guid']
+      end
+
+      if attributes.key?(:'grandparent_key')
+        self.grandparent_key = attributes[:'grandparent_key']
+      end
+
+      if attributes.key?(:'grandparent_title')
+        self.grandparent_title = attributes[:'grandparent_title']
+      end
+
+      if attributes.key?(:'grandparent_thumb')
+        self.grandparent_thumb = attributes[:'grandparent_thumb']
+      end
+
+      if attributes.key?(:'grandparent_art')
+        self.grandparent_art = attributes[:'grandparent_art']
+      end
+
+      if attributes.key?(:'grandparent_theme')
+        self.grandparent_theme = attributes[:'grandparent_theme']
+      end
+
       if attributes.key?(:'media')
         if (value = attributes[:'media']).is_a?(Array)
           self.media = value
@@ -336,6 +456,70 @@ module OpenapiClient
       if attributes.key?(:'skip_count')
         self.skip_count = attributes[:'skip_count']
       end
+
+      if attributes.key?(:'index')
+        self.index = attributes[:'index']
+      end
+
+      if attributes.key?(:'theme')
+        self.theme = attributes[:'theme']
+      end
+
+      if attributes.key?(:'leaf_count')
+        self.leaf_count = attributes[:'leaf_count']
+      end
+
+      if attributes.key?(:'viewed_leaf_count')
+        self.viewed_leaf_count = attributes[:'viewed_leaf_count']
+      end
+
+      if attributes.key?(:'child_count')
+        self.child_count = attributes[:'child_count']
+      end
+
+      if attributes.key?(:'has_premium_extras')
+        self.has_premium_extras = attributes[:'has_premium_extras']
+      end
+
+      if attributes.key?(:'has_premium_primary_extra')
+        self.has_premium_primary_extra = attributes[:'has_premium_primary_extra']
+      end
+
+      if attributes.key?(:'parent_rating_key')
+        self.parent_rating_key = attributes[:'parent_rating_key']
+      end
+
+      if attributes.key?(:'parent_guid')
+        self.parent_guid = attributes[:'parent_guid']
+      end
+
+      if attributes.key?(:'parent_studio')
+        self.parent_studio = attributes[:'parent_studio']
+      end
+
+      if attributes.key?(:'parent_key')
+        self.parent_key = attributes[:'parent_key']
+      end
+
+      if attributes.key?(:'parent_title')
+        self.parent_title = attributes[:'parent_title']
+      end
+
+      if attributes.key?(:'parent_index')
+        self.parent_index = attributes[:'parent_index']
+      end
+
+      if attributes.key?(:'parent_year')
+        self.parent_year = attributes[:'parent_year']
+      end
+
+      if attributes.key?(:'parent_thumb')
+        self.parent_thumb = attributes[:'parent_thumb']
+      end
+
+      if attributes.key?(:'parent_theme')
+        self.parent_theme = attributes[:'parent_theme']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -380,6 +564,13 @@ module OpenapiClient
           chapter_source == o.chapter_source &&
           primary_extra_key == o.primary_extra_key &&
           rating_image == o.rating_image &&
+          grandparent_rating_key == o.grandparent_rating_key &&
+          grandparent_guid == o.grandparent_guid &&
+          grandparent_key == o.grandparent_key &&
+          grandparent_title == o.grandparent_title &&
+          grandparent_thumb == o.grandparent_thumb &&
+          grandparent_art == o.grandparent_art &&
+          grandparent_theme == o.grandparent_theme &&
           media == o.media &&
           genre == o.genre &&
           country == o.country &&
@@ -391,7 +582,23 @@ module OpenapiClient
           last_viewed_at == o.last_viewed_at &&
           original_title == o.original_title &&
           view_offset == o.view_offset &&
-          skip_count == o.skip_count
+          skip_count == o.skip_count &&
+          index == o.index &&
+          theme == o.theme &&
+          leaf_count == o.leaf_count &&
+          viewed_leaf_count == o.viewed_leaf_count &&
+          child_count == o.child_count &&
+          has_premium_extras == o.has_premium_extras &&
+          has_premium_primary_extra == o.has_premium_primary_extra &&
+          parent_rating_key == o.parent_rating_key &&
+          parent_guid == o.parent_guid &&
+          parent_studio == o.parent_studio &&
+          parent_key == o.parent_key &&
+          parent_title == o.parent_title &&
+          parent_index == o.parent_index &&
+          parent_year == o.parent_year &&
+          parent_thumb == o.parent_thumb &&
+          parent_theme == o.parent_theme
     end
 
     # @see the `==` method
@@ -403,7 +610,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [rating_key, key, guid, studio, type, title, content_rating, summary, rating, audience_rating, year, tagline, thumb, art, duration, originally_available_at, added_at, updated_at, audience_rating_image, chapter_source, primary_extra_key, rating_image, media, genre, country, director, writer, role, title_sort, view_count, last_viewed_at, original_title, view_offset, skip_count].hash
+      [rating_key, key, guid, studio, type, title, content_rating, summary, rating, audience_rating, year, tagline, thumb, art, duration, originally_available_at, added_at, updated_at, audience_rating_image, chapter_source, primary_extra_key, rating_image, grandparent_rating_key, grandparent_guid, grandparent_key, grandparent_title, grandparent_thumb, grandparent_art, grandparent_theme, media, genre, country, director, writer, role, title_sort, view_count, last_viewed_at, original_title, view_offset, skip_count, index, theme, leaf_count, viewed_leaf_count, child_count, has_premium_extras, has_premium_primary_extra, parent_rating_key, parent_guid, parent_studio, parent_key, parent_title, parent_index, parent_year, parent_thumb, parent_theme].hash
     end
 
     # Builds the object from hash

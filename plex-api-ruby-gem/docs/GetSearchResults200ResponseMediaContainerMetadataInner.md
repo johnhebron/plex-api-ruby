@@ -36,7 +36,7 @@
 | **genre** | [**Array&lt;GetPlaylistContents200ResponseMediaContainerMetadataInnerGenreInner&gt;**](GetPlaylistContents200ResponseMediaContainerMetadataInnerGenreInner.md) |  | [optional] |
 | **director** | [**Array&lt;GetSearchResults200ResponseMediaContainerMetadataInnerDirectorInner&gt;**](GetSearchResults200ResponseMediaContainerMetadataInnerDirectorInner.md) |  | [optional] |
 | **writer** | [**Array&lt;GetSearchResults200ResponseMediaContainerMetadataInnerWriterInner&gt;**](GetSearchResults200ResponseMediaContainerMetadataInnerWriterInner.md) |  | [optional] |
-| **country** | [**Array&lt;GetRecentlyAdded200ResponseMediaContainerMetadataInnerCountryInner&gt;**](GetRecentlyAdded200ResponseMediaContainerMetadataInnerCountryInner.md) |  | [optional] |
+| **country** | [**Array&lt;GetLibraryHubs200ResponseMediaContainerHubInnerMetadataInnerCountryInner&gt;**](GetLibraryHubs200ResponseMediaContainerHubInnerMetadataInnerCountryInner.md) |  | [optional] |
 | **role** | [**Array&lt;GetSearchResults200ResponseMediaContainerMetadataInnerRoleInner&gt;**](GetSearchResults200ResponseMediaContainerMetadataInnerRoleInner.md) |  | [optional] |
 
 ## Example

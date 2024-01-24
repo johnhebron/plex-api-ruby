@@ -12,7 +12,7 @@ All URIs are relative to *http://10.10.10.47:32400*
 
 ## get_session_history
 
-> get_session_history
+> <GetSessionHistory200Response> get_session_history
 
 Get Session History
 
@@ -35,7 +35,8 @@ api_instance = OpenapiClient::SessionsApi.new
 
 begin
   # Get Session History
-  api_instance.get_session_history
+  result = api_instance.get_session_history
+  p result
 rescue OpenapiClient::ApiError => e
   puts "Error when calling SessionsApi->get_session_history: #{e}"
 end
@@ -43,9 +44,9 @@ end
 
 #### Using the get_session_history_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> get_session_history_with_http_info
+> <Array(<GetSessionHistory200Response>, Integer, Hash)> get_session_history_with_http_info
 
 ```ruby
 begin
@@ -53,7 +54,7 @@ begin
   data, status_code, headers = api_instance.get_session_history_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <GetSessionHistory200Response>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling SessionsApi->get_session_history_with_http_info: #{e}"
 end
@@ -65,7 +66,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-nil (empty response body)
+[**GetSessionHistory200Response**](GetSessionHistory200Response.md)
 
 ### Authorization
 
@@ -79,7 +80,7 @@ nil (empty response body)
 
 ## get_sessions
 
-> get_sessions
+> <GetSessions200Response> get_sessions
 
 Get Active Sessions
 
@@ -102,7 +103,8 @@ api_instance = OpenapiClient::SessionsApi.new
 
 begin
   # Get Active Sessions
-  api_instance.get_sessions
+  result = api_instance.get_sessions
+  p result
 rescue OpenapiClient::ApiError => e
   puts "Error when calling SessionsApi->get_sessions: #{e}"
 end
@@ -110,9 +112,9 @@ end
 
 #### Using the get_sessions_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> get_sessions_with_http_info
+> <Array(<GetSessions200Response>, Integer, Hash)> get_sessions_with_http_info
 
 ```ruby
 begin
@@ -120,7 +122,7 @@ begin
   data, status_code, headers = api_instance.get_sessions_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <GetSessions200Response>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling SessionsApi->get_sessions_with_http_info: #{e}"
 end
@@ -132,7 +134,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-nil (empty response body)
+[**GetSessions200Response**](GetSessions200Response.md)
 
 ### Authorization
 

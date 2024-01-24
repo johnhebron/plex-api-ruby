@@ -10,7 +10,7 @@ All URIs are relative to *http://10.10.10.47:32400*
 
 ## get_global_hubs
 
-> get_global_hubs(opts)
+> <GetGlobalHubs200Response> get_global_hubs(opts)
 
 Get Global Hubs
 
@@ -37,7 +37,8 @@ opts = {
 
 begin
   # Get Global Hubs
-  api_instance.get_global_hubs(opts)
+  result = api_instance.get_global_hubs(opts)
+  p result
 rescue OpenapiClient::ApiError => e
   puts "Error when calling HubsApi->get_global_hubs: #{e}"
 end
@@ -45,9 +46,9 @@ end
 
 #### Using the get_global_hubs_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> get_global_hubs_with_http_info(opts)
+> <Array(<GetGlobalHubs200Response>, Integer, Hash)> get_global_hubs_with_http_info(opts)
 
 ```ruby
 begin
@@ -55,7 +56,7 @@ begin
   data, status_code, headers = api_instance.get_global_hubs_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <GetGlobalHubs200Response>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling HubsApi->get_global_hubs_with_http_info: #{e}"
 end
@@ -70,7 +71,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**GetGlobalHubs200Response**](GetGlobalHubs200Response.md)
 
 ### Authorization
 
@@ -84,7 +85,7 @@ nil (empty response body)
 
 ## get_library_hubs
 
-> get_library_hubs(section_id, opts)
+> <GetLibraryHubs200Response> get_library_hubs(section_id, opts)
 
 Get library specific hubs
 
@@ -112,7 +113,8 @@ opts = {
 
 begin
   # Get library specific hubs
-  api_instance.get_library_hubs(section_id, opts)
+  result = api_instance.get_library_hubs(section_id, opts)
+  p result
 rescue OpenapiClient::ApiError => e
   puts "Error when calling HubsApi->get_library_hubs: #{e}"
 end
@@ -120,9 +122,9 @@ end
 
 #### Using the get_library_hubs_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> get_library_hubs_with_http_info(section_id, opts)
+> <Array(<GetLibraryHubs200Response>, Integer, Hash)> get_library_hubs_with_http_info(section_id, opts)
 
 ```ruby
 begin
@@ -130,7 +132,7 @@ begin
   data, status_code, headers = api_instance.get_library_hubs_with_http_info(section_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <GetLibraryHubs200Response>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling HubsApi->get_library_hubs_with_http_info: #{e}"
 end
@@ -146,7 +148,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**GetLibraryHubs200Response**](GetLibraryHubs200Response.md)
 
 ### Authorization
 

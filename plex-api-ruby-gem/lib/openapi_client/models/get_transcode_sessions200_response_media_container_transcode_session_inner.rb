@@ -31,6 +31,8 @@ module OpenapiClient
 
     attr_accessor :duration
 
+    attr_accessor :remaining
+
     attr_accessor :context
 
     attr_accessor :source_video_codec
@@ -40,6 +42,8 @@ module OpenapiClient
     attr_accessor :video_decision
 
     attr_accessor :audio_decision
+
+    attr_accessor :subtitle_decision
 
     attr_accessor :protocol
 
@@ -70,11 +74,13 @@ module OpenapiClient
         :'speed' => :'speed',
         :'error' => :'error',
         :'duration' => :'duration',
+        :'remaining' => :'remaining',
         :'context' => :'context',
         :'source_video_codec' => :'sourceVideoCodec',
         :'source_audio_codec' => :'sourceAudioCodec',
         :'video_decision' => :'videoDecision',
         :'audio_decision' => :'audioDecision',
+        :'subtitle_decision' => :'subtitleDecision',
         :'protocol' => :'protocol',
         :'container' => :'container',
         :'video_codec' => :'videoCodec',
@@ -99,20 +105,22 @@ module OpenapiClient
         :'throttled' => :'Boolean',
         :'complete' => :'Boolean',
         :'progress' => :'Float',
-        :'size' => :'Float',
+        :'size' => :'Integer',
         :'speed' => :'Float',
         :'error' => :'Boolean',
-        :'duration' => :'Float',
+        :'duration' => :'Integer',
+        :'remaining' => :'Integer',
         :'context' => :'String',
         :'source_video_codec' => :'String',
         :'source_audio_codec' => :'String',
         :'video_decision' => :'String',
         :'audio_decision' => :'String',
+        :'subtitle_decision' => :'String',
         :'protocol' => :'String',
         :'container' => :'String',
         :'video_codec' => :'String',
         :'audio_codec' => :'String',
-        :'audio_channels' => :'Float',
+        :'audio_channels' => :'Integer',
         :'transcode_hw_requested' => :'Boolean',
         :'time_stamp' => :'Float',
         :'max_offset_available' => :'Float',
@@ -173,6 +181,10 @@ module OpenapiClient
         self.duration = attributes[:'duration']
       end
 
+      if attributes.key?(:'remaining')
+        self.remaining = attributes[:'remaining']
+      end
+
       if attributes.key?(:'context')
         self.context = attributes[:'context']
       end
@@ -191,6 +203,10 @@ module OpenapiClient
 
       if attributes.key?(:'audio_decision')
         self.audio_decision = attributes[:'audio_decision']
+      end
+
+      if attributes.key?(:'subtitle_decision')
+        self.subtitle_decision = attributes[:'subtitle_decision']
       end
 
       if attributes.key?(:'protocol')
@@ -258,11 +274,13 @@ module OpenapiClient
           speed == o.speed &&
           error == o.error &&
           duration == o.duration &&
+          remaining == o.remaining &&
           context == o.context &&
           source_video_codec == o.source_video_codec &&
           source_audio_codec == o.source_audio_codec &&
           video_decision == o.video_decision &&
           audio_decision == o.audio_decision &&
+          subtitle_decision == o.subtitle_decision &&
           protocol == o.protocol &&
           container == o.container &&
           video_codec == o.video_codec &&
@@ -283,7 +301,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [key, throttled, complete, progress, size, speed, error, duration, context, source_video_codec, source_audio_codec, video_decision, audio_decision, protocol, container, video_codec, audio_codec, audio_channels, transcode_hw_requested, time_stamp, max_offset_available, min_offset_available].hash
+      [key, throttled, complete, progress, size, speed, error, duration, remaining, context, source_video_codec, source_audio_codec, video_decision, audio_decision, subtitle_decision, protocol, container, video_codec, audio_codec, audio_channels, transcode_hw_requested, time_stamp, max_offset_available, min_offset_available].hash
     end
 
     # Builds the object from hash

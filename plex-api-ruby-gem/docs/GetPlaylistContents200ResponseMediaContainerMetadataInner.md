@@ -32,7 +32,7 @@
 | **rating_image** | **String** |  | [optional] |
 | **media** | [**Array&lt;GetPlaylistContents200ResponseMediaContainerMetadataInnerMediaInner&gt;**](GetPlaylistContents200ResponseMediaContainerMetadataInnerMediaInner.md) |  | [optional] |
 | **genre** | [**Array&lt;GetPlaylistContents200ResponseMediaContainerMetadataInnerGenreInner&gt;**](GetPlaylistContents200ResponseMediaContainerMetadataInnerGenreInner.md) |  | [optional] |
-| **country** | [**Array&lt;GetRecentlyAdded200ResponseMediaContainerMetadataInnerCountryInner&gt;**](GetRecentlyAdded200ResponseMediaContainerMetadataInnerCountryInner.md) |  | [optional] |
+| **country** | [**Array&lt;GetLibraryHubs200ResponseMediaContainerHubInnerMetadataInnerCountryInner&gt;**](GetLibraryHubs200ResponseMediaContainerHubInnerMetadataInnerCountryInner.md) |  | [optional] |
 | **director** | [**Array&lt;GetPlaylistContents200ResponseMediaContainerMetadataInnerDirectorInner&gt;**](GetPlaylistContents200ResponseMediaContainerMetadataInnerDirectorInner.md) |  | [optional] |
 | **writer** | [**Array&lt;GetPlaylistContents200ResponseMediaContainerMetadataInnerDirectorInner&gt;**](GetPlaylistContents200ResponseMediaContainerMetadataInnerDirectorInner.md) |  | [optional] |
 | **role** | [**Array&lt;GetPlaylistContents200ResponseMediaContainerMetadataInnerRoleInner&gt;**](GetPlaylistContents200ResponseMediaContainerMetadataInnerRoleInner.md) |  | [optional] |

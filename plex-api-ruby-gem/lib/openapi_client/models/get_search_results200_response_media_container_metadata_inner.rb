@@ -163,7 +163,7 @@ module OpenapiClient
         :'genre' => :'Array<GetPlaylistContents200ResponseMediaContainerMetadataInnerGenreInner>',
         :'director' => :'Array<GetSearchResults200ResponseMediaContainerMetadataInnerDirectorInner>',
         :'writer' => :'Array<GetSearchResults200ResponseMediaContainerMetadataInnerWriterInner>',
-        :'country' => :'Array<GetRecentlyAdded200ResponseMediaContainerMetadataInnerCountryInner>',
+        :'country' => :'Array<GetLibraryHubs200ResponseMediaContainerHubInnerMetadataInnerCountryInner>',
         :'role' => :'Array<GetSearchResults200ResponseMediaContainerMetadataInnerRoleInner>'
       }
     end
